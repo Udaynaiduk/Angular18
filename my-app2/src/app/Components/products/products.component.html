@@ -1,0 +1,42 @@
+<div class="product-container">
+    <div class="product-card" *ngFor="let product of products | async">
+      <img [src]="product.image" alt="{{ product.title }}" />
+  
+      <h3>{{ product.title }}</h3>
+      <p class="category">{{ product.category }}</p>
+  
+      <p class="price">$ {{ product.price }}</p>
+  
+      <p class="rating">
+        ⭐ {{ product.rating.rate }} ({{ product.rating.count }} reviews)
+      </p>
+  
+      <button>Add to Cart</button>
+    </div>
+  </div>
+<!-- Compare this snippet from src/app/Components/footer/footer.component.html:
+ <h1>Add Product</h1>
+    <form (ngSubmit)="onSubmit()" #productForm="ngForm">
+        <div>
+            <label for="title">Title:</label>
+            <input type="text" id="title" required [(ngModel)]="product.title" name="title" #title="ngModel">
+        </div>
+        <div>
+            <label for="price">Price:</label>
+            <input type="number" id="price" required [(ngModel)]="product.price" name="price" #price="ngModel">
+        </div>
+        <div>
+            <label for="description">Description:</label>
+            <textarea id="description" required [(ngModel)]="product.description" name="description" #description="ngModel"></textarea>
+        </div>
+        <div>
+            <label for="category">Category:</label>
+            <input type="text" id="category" required [(ngModel)]="product.category" name="category" #category="ngModel">
+        </div>
+        <div>
+            <label for="image">Image URL:</label>
+            <input type="text" id="image" required [(ngModel)]="product.image" name="image" #image="ngModel">
+        </div>
+        <button type="submit" [disabled]="!productForm.form.valid">Add Product</button>
+         -->
+  

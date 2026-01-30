@@ -1,0 +1,15 @@
+<div class="paddy-card">
+        
+
+<img [src]="paddy.imageUrl" alt="{{paddy.name}}" class="paddy-image">
+  
+        <h3>{{ paddy.name }}</h3>
+        <p><strong>Variety:</strong> {{ paddy.variety }}</p>
+        <p><strong>Quantity:</strong> {{ paddy.quantityKg }} kg</p>
+        <p><strong>Price per Kg:</strong> ₹{{ paddy.pricePerKg }}</p>
+        <p><strong>Total Value:</strong> ₹{{ getTotalValue(paddy) }}</p>
+        <p><strong>Location:</strong> {{ paddy.location }}</p>
+        <p><strong>Harvest Date:</strong> {{ paddy.harvestDate | date:'mediumDate' }}</p>
+  
+        <button>Add to Cart</button>
+</div>

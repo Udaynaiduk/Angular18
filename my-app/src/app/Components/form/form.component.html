@@ -1,0 +1,20 @@
+<div class="row row-cols-1 g-md-3">
+    <form #myform="ngForm" (submit)="submitform(myform.value) "(reset)="reset(myform)">
+        <p>Firstname</p><input name="firstname" [(ngModel)]="user.firstname"  #firstname="ngModel" ngModel required minlength="10">
+        <span *ngIf= "firstname.dirty&&firstname.hasError('required')">required</span>
+        <p>{{firstname.errors|json}}</p>
+
+        <p>Lastname</p><input name="lastname" [(ngModel)]="user.lastname"  ngModel>
+        <div ngModelGroup="address">
+            Street<input name="street" [(ngModel)]="user.address.street"  ngModel>
+            City<input name="city"  [(ngModel)]="user.address.city"  ngModel>
+            State<input name="state" [(ngModel)]="user.address.state"  ngModel>
+        </div>
+        <button type="submit">Submit</button>
+        <button type="reset" [disabled]="myform.invalid">Reset</button>
+    </form>
+</div>
+
+<h1>{{myform.invalid}}</h1>
+<h1>{{myform.value|json}}</h1>
+<h1>{{firstname.value}}</h1>

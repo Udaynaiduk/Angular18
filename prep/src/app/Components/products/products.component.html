@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row g-4">
+    <!-- unwrap products$ using async pipe -->
+    <ng-container *ngIf="products$ | async as products">
+      <div class="col-12 col-md-4" 
+           *ngFor="let product of products | paginate:{ itemsPerPage: 6, currentPage: p }; trackBy: track">
+        <app-product [product]="product"></app-product>
+      </div>
+    </ng-container>
+  </div>
+</div>
+
+<div class="page">
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>

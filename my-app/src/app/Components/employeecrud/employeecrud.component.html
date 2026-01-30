@@ -1,0 +1,13 @@
+<div class="container">
+    <h2 class="text-center mt-4">Employee Management</h2>
+
+    <div class="row justify-content-center mt-4">
+        <div class="col-12 col-md-5">
+            <app-addemployeee [editData]="editData" (updateEmp)="updateEmp($event)" (addEmp)="ademp($event)"></app-addemployeee>
+        </div>
+
+        <div class="col-12 col-md-5 mt-3 mt-md-0">
+            <app-employeedata (editEmp)="edit($event)"  (Event_emiter)="delete($event)" [empdata]="Employees" ></app-employeedata>
+        </div>
+    </div>
+</div>

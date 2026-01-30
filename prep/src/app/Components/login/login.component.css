@@ -1,0 +1,31 @@
+.error{
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+  }
+
+body, html {
+    height: 100%; /* make sure the page takes full height */
+    margin: 0;
+  }
+  
+  .for {
+    display: flex;
+    justify-content: center; /* horizontal center */
+    align-items: center;     /* vertical center */
+    flex-direction: column;
+    height: 100vh;           /* full viewport height */
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #e05d17;
+    border-radius: 8px;
+    background-color: #e05d17;
+  }
+  

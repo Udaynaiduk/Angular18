@@ -1,0 +1,27 @@
+.active{
+    text-decoration: none;
+    border-style: double;
+    border-color: brown;
+    background-color: aqua;
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    margin: 10px;
+   
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    
+}
+nav{
+    background-color: wheat;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}

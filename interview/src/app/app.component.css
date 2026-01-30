@@ -1,0 +1,109 @@
+h1,h2,h3{
+    color: blue;
+    border-width: 10px;
+    border-color: black;
+    border-style: solid;
+    text-align: center;
+}
+/* style properties
+ color:red; //text color
+ background-color: yellow; //background color
+
+
+*/
+.allow{
+    background-color: lightgray;  /* whole button or div*/
+    color: black;
+}
+.not-allow{
+    
+    background-color: lightcoral;
+    color: aqua; /* for text*/
+}
+button:hover{
+    background-color: yellow;
+}
+/*Text properties
+text-align: center; //left, right, justify
+text-decoration: underline; //overline, line-through
+font-weight: bold; //lighter, normal, bolder
+font-family: Arial, sans-serif; //cursive, fantasy, monospace
+font-size: 20px; //px, em, rem, % 96inch = 1px absolute deafult size 16px for paragraph
+line-height: 1.5; //normal, number, length, %
+text-transform: uppercase; //lowercase, capitalize
+*/
+#only #left{
+    text-align: center;
+    text-decoration: underline;
+}
+p{
+    text-align: left;
+    text-decoration: red line-through;
+}
+
+#second p{
+    text-align: right;
+    text-decoration: overline;
+    font-weight:bolder;
+    font-family: cursive;
+    line-height: 20px;
+    text-transform: uppercase;
+}
+
+a{
+    text-decoration: none;
+}
+
+/*
+box Model
+height: 100px; //auto, %, px, em, rem
+width: 100px; //auto, %, px, em, rem
+border-width: 2px; //thin, medium, thick, px, em, rem
+border-style: solid; //dotted, dashed, solid, double, groove, ridge, inset, outset, none, hidden
+border-color: black; //color name, hex, rgb, rgba
+border: 5px solid black; //shorthand for border-width, border-style, border-color
+border-radius: 10px; //px, em, rem, %
+border-radius: 50%; //circle
+padding: 10px; //top, right, bottom, left, px, em, rem, %
+margin: 10px; //top, right, bottom, left, px, em, rem, %
+*/
+#box{
+
+    height: 200px;
+    background-color: lightcoral;
+    width: 200px;
+    border-width: 5px;
+    border-color: rgb(3, 3, 3);
+    border-style: solid;
+    border-radius: 15px;
+    padding: 50px ;
+    
+}
+#box p{
+    text-align: center;
+}
+
+#main{
+    height: 100px;
+    width: 150px;
+    background-color: antiquewhite;
+    overflow: scroll;
+}
+.child{
+    height: 50px;
+    width: 50px;
+    background-color: lightblue;
+   
+    margin: 10px;
+   
+  
+}
+img{
+    border-radius: 50%;
+}
+
+.navbar{
+    height: 60px;
+    background-color: rgb(14, 13, 13);
+   
+}

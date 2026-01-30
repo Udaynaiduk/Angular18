@@ -1,0 +1,38 @@
+<p>siggin works!</p>
+<form [formGroup]="sigign">
+    <label for="username">Email:</label>
+    <input id="username" type="text" formControlName="username" />
+    <span *ngIf="sigign.get('username')?.touched && sigign.get('username')?.invalid">
+        Email is required.</span>
+    
+    <label for="password">Password:</label>
+    <input id="password" type="text" formControlName="password" />
+    <span *ngIf="sigign.get('password')?.touched && sigign.get('password')?.invalid">
+        Password is required.</span>
+    <label for="confirmpassword">Confirm Password:</label>
+    <input id="confirmpassword" type="text" formControlName="confirmpassword" />
+    <span *ngIf="sigign.get('confirmpassword')?.touched && sigign.get('confirmpassword')?.invalid">
+        Confirm Password is required.</span>
+        <div formGroupName="address">
+        <label for="city">city:</label>
+        <input id="street" type="text" formControlName="city" />
+        <label for="state">state:</label>
+        <input id="state" type="text" formControlName="state" />
+        <label for="postalcode">postalCode:</label>
+        <input id="postalcode" type="text" formControlName="postalcode" />
+        <div formArrayName="loction">
+            <div *ngFor="let loc of getloctionarray().controls;let i = index">
+                <input type="text" [formControlName]="i"> 
+                <button type="button" (click)="remove(i)">Remove</button>
+            </div>
+           
+        </div>
+        <button (click)="addnewloaction()">
+            Add loaction
+        </button>
+
+
+            
+        </div>
+    <button type="submit" (click)="submit()">Sign In</button>
+</form>

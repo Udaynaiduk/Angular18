@@ -1,0 +1,19 @@
+<div class="form">
+<form [formGroup]="myform">
+<label for="username">Username:</label>
+<input id="username" type="text" formControlName="username" />
+<span *ngIf="myform.get('username')?.touched && myform.get('username')?.invalid && myform.get('username')?.errors?.['space']&&myform.get('username')?.errors?.['required']">
+  Username is required.</span>
+<label for="password">Password:</label>
+<input id="password"  type="text" formControlName="password"/>
+<div formArrayName="skills">
+    <label>Skills</label>
+    <div *ngFor="let skill of getskillss().controls; let i = index">
+      <input type="text" [formControlName]="i" />
+      <button type="button" (click)="removeskill(i)">Remove</button>
+    </div>
+    <button type="button" (click)="addnewskill()">Add Skill</button>
+  </div>
+<button type="submit">Submit</button>
+</form>
+</div>

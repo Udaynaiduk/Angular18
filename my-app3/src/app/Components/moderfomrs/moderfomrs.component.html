@@ -1,0 +1,55 @@
+<form [formGroup]="myform" (ngSubmit)="submit()">
+
+    <!-- User -->
+    user:
+    <input type="text" formControlName="user"/><br>
+    <span class="text-danger" *ngIf="myform.controls['user'].hasError('required')&&myform.controls['user'].touched">required</span>
+    <span class="text-danger" *ngIf="myform.controls['user'].hasError('minlength') && myform.controls['user']?.touched">Min len 3</span>
+  
+    <!-- Password -->
+    password:
+    <input type="password" formControlName="password"/><br>
+    <span class="text-danger" *ngIf="myform.controls['password']?.hasError('required') && myform.get('password')?.touched">required</span>
+    <span class="text-danger" *ngIf="myform.get('password')?.hasError('minlength') && myform.get('password')?.touched">Min len 6</span>
+  
+    <!-- Address Group -->
+    <div formGroupName="address">
+      <label>Street:</label>
+      <input type="text" formControlName="street">
+      <span class="text-danger" *ngIf="myform.get('address.street')?.hasError('required') && myform.get('address.street')?.touched">required</span>
+      <br>
+  
+      <label>City:</label>
+      <input type="text" formControlName="City">
+      <span class="text-danger" *ngIf="myform.get('address.City')?.hasError('required') && myform.get('address.City')?.touched">required</span>
+      <br>
+  
+      <label>Pincode:</label>
+      <input type="text" formControlName="Pincode">
+      <span class="text-danger" *ngIf="myform.get('address.Pincode')?.hasError('required') && myform.get('address.Pincode')?.touched">required</span>
+      <span class="text-danger" *ngIf="myform.get('address.Pincode')?.hasError('minlength') && myform.get('address.Pincode')?.touched">Min len 3</span>
+      <span class="text-danger" *ngIf="myform.get('address.Pincode')?.hasError('maxlength') && myform.get('address.Pincode')?.touched">Max len 6</span>
+    </div>
+  
+    <br>
+    <button type="submit" [disabled]="myform.invalid">Submit</button>
+  </form>
+  
+
+  <form [formGroup]="newForm" (ngSubmit)="submit1()">
+    username : <input type="text" formControlName="name"/>
+    <span class="text-danger" *ngIf="newForm.get('name')?.hasError('usernameTaken') && newForm.get('name')?.touched">
+        Already existed
+      </span>
+    <br>
+    
+  <div formArrayName="skills">
+    <div *ngFor="let skill of skills.controls; let i = index">
+      <input type="text" [formControlName]="i"/>
+      <button type="button" (click)="removeSkill(i)">Remove</button>
+    </div>
+  </div>
+    <button (click)="addSkill()">Add</button>
+    <br>
+    <button type="submit" [disabled]="newForm.invalid">Submit</button>
+  </form>

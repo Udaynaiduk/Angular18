@@ -1,0 +1,20 @@
+<h1>Childe works</h1>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+        <th>category</th>
+        <th>Name</th>
+        <th>price</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of proucts">
+        <ng-container *ngIf="item.price > 100">
+        <td>{{item.category}}</td>
+        <td>{{item.title}}</td>
+        <td>{{item.price}}</td>
+    </ng-container>  
+        </tr>
+</table>
+<input type="text" [(ngModel)]="childdata">
+<ng-content></ng-content>

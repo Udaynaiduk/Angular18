@@ -1,0 +1,17 @@
+<h1>{{time$|async}}</h1>
+<div *ngFor="let pro of product$ | async">
+    <h2>{{pro?.id}}</h2>
+</div>
+<div *ngFor="let pro of concatprod | async">
+    <h2>{{pro?.id}}</h2>
+</div>
+<div *ngFor="let pro of switchprod | async">
+    <h2>{{pro?.id}}</h2>
+</div>
+<div *ngFor="let pro of exhasut | async">
+    <h1>Exahust</h1>
+    <h2>{{pro?.id}}</h2>
+</div>
+<div>behaviorSubjectob {{behaviorSubjectob | async}}</div>
+<h2>{{replaySubjectob|async}}</h2>
+<button (click)="replaySubjectFunc()">Emit Values</button>

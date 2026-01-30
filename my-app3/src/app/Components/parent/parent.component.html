@@ -1,0 +1,16 @@
+<H1>Employeee</H1>
+<app-child [empData]="employees" (Edit)="editemp($event)" (Delete)="deletemp($event)"></app-child>
+<app-child2 [edit]="Editemp" (add)="addemp($event)" (update)="updateemp($event)"></app-child2>
+
+<app-child3 
+      *ngFor="let emp of employee" 
+      [employee]="emp">
+    </app-child3>
+<button (click)="changeAge()">Change Age</button>
+<button (click)="replaceEmployee()">Replace</button>
+
+
+<h1>Dynamic Component</h1>
+<button (click)="loadComponent()">Load Component</button>
+
+<ng-container #container></ng-container>

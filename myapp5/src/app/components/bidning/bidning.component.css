@@ -1,0 +1,9 @@
+.normal-mode {
+    background-color: white;
+    color: black;
+}
+
+.dark-mode{
+    background-color: #121212;
+    color: white;
+}

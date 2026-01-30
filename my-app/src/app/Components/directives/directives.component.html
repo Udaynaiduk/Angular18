@@ -1,0 +1,115 @@
+<label>Enter your Date of birth:</label>
+<input type="date" [(ngModel)]="dob">
+
+<button (click)="checkeligiblity()">Click</button>
+
+<div *ngIf="age >= 18">
+  <h2>Welcome to voting</h2>
+  {{age}}
+</div>
+
+<div *ngIf="age < 18">
+  <h2>Not eligible for voting</h2>
+  {{age}}
+</div>
+
+<div [ngSwitch]="day">
+    <div *ngSwitchCase="'monday'">Monday</div>
+    <div *ngSwitchCase="'tuesday'">Tuesday</div>
+    <div *ngSwitchDefault>Not Eligible</div>
+  </div>
+  
+  <div>Calculator</div>
+    <input type="number" [(ngModel)]="num1">
+    <input type="number" [(ngModel)]="num2">
+    <br>
+    <select [(ngModel)]="op" (change)="calculate()" >
+        <option *ngFor="let o of opr" [value]="o">{{o}}</option>
+    </select>
+
+{{result}}
+<div>Add New Employee</div>
+    <br>
+    <input type="number" placeholder="Age" #a>
+    <br>
+    <input type="text" placeholder="Name" #n>
+    <br>
+    <input type="text" placeholder="City" #c >
+    <br>
+    <button (click)="addEmp(a.value,n.value,c.value)">Add Employee</button>
+    <br><br>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Age</th>
+            <th>Name</th>
+            <th>City</th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let emp of Emp;ngForTrackBy:track">
+        <td>{{emp.age}}</td>
+        <td>{{emp.name}}</td>
+        <td>{{emp.city}}</td>
+    </tr>
+    </tbody>
+</table>
+<input type="number" [(ngModel)]="ngstyles">
+
+<h1 
+  [style.color]="ngstyles == 2 ? 'red' : 'blue'"
+  [style.fontSize.px]="ngstyles == 2 ? 20 : 30">
+  Welcome to Angular Directives
+</h1>
+<div 
+  [ngStyle]="{
+    'color': ngstyles == 3 ? 'green' : 'orange',
+    'font-size.px': ngstyles == 3 ? 25 : 35,
+    'background-color': ngstyles == 3 ? 'lightgray' : 'lightyellow'
+  }">
+  This is an example of ngStyle directive
+  
+  <div [ngStyle]="{'color':ngstyles%2==0?'red':'green','background-color':ngstyles==2?'red':'blue'}">
+    NgStyle
+  </div>
+
+  <div [ngStyle]="ngfuntion()">hello funtion</div>
+<div [ngStyle]="ngstylescolor">hello form component</div>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Age</th>
+            <th>Name</th>
+            <th>City</th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let emp of Emp;ngForTrackBy:track">
+        <td [ngClass]="{'bg-primary text-white':emp.age>25,'bg-warning':emp.age<=25}">{{emp.age}}</td>
+        <td>{{emp.name}}</td>
+        <td>{{emp.city}}</td>
+    </tr>
+    </tbody>
+</table>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>City</th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let users of users;ngForTrackBy:track "[ngClass]="names(users.name)">
+        <td>{{users.id}}</td>
+        <td>{{users.name}}</td>
+        <td>{{users.email}}</td>
+      
+    </tr>
+    </tbody>
+</table>
+<input appNumberonly>
+<h1 appHightlighter>Hello</h1>
+

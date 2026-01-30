@@ -1,0 +1,21 @@
+<p>binding works!</p>
+<h1 [innerHTML]="name"></h1>
+<h1>{{name}}</h1>
+
+<select #select [(ngModel)]="selectcountry"  (ngModelChange)="slecechange($event)">
+    <option *ngFor="let country of countries" [value]="country">{{country}}</option>
+</select>
+
+<select (change)="selectChangec($event)">
+    <option *ngFor="let country of countries" [value]="country">
+      {{ country }}
+    </option>
+  </select>
+
+  <input [value]="name" type="text">
+    <input [(ngModel)]="name" type="text">
+
+    <h1 [innerHTML]="name" ></h1>
+
+    <input type="text" (keyup)="keyup($event)">
+    <button (click)="ngDoCheck()"> Refersh</button>

@@ -1,0 +1,26 @@
+<p>Moder driven form</p>
+<div class="row">
+<div class="col-sm-4 offset-4 border p-5">
+<form [formGroup]="registrationfrom" (submit)="submit(registrationfrom)">
+    <div class="fomr-group">
+        <label>Email</label>
+        <input type="text" class="form-control" formControlName="firstname">
+        <span *ngIf="registrationfrom.controls['firstname'].hasError('required')">required</span>
+    </div>
+    <div class="fomr-group">
+        <label>Password</label>
+        <input type="text" class="form-control" formControlName="password">
+    </div>
+    <div formGroupName="address">
+        <div class="fomr-group">
+            <label>State</label>
+            <input type="text" class="form-control" formControlName="State">
+        </div>
+    </div>
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+
+</form>
+{{registrationfrom.value |json}}
+</div>
+</div>

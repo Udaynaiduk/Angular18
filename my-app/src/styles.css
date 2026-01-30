@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+/* Mobile */
+@media (max-width: 600px) {
+    .container { 
+      flex-direction: column;
+    }
+  }
+  
+  /* Tablet */
+  @media (min-width: 601px) and (max-width: 900px) {
+    .container {
+      flex-direction: row;
+    }
+  }
+  
+  /* Laptop + Desktop */
+  @media (min-width: 901px) {
+    .container {
+      flex-direction: row;
+    }
+  }
+  

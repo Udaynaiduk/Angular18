@@ -1,0 +1,9 @@
+<p>binding works!</p>
+<h1>{{name}}</h1>
+<h1 [innerHTML]="name"></h1>
+<select>
+    <option *ngFor="let item of skills; trackBy: trackBySkill" [ngValue]="item">
+      {{ item }}
+    </option>
+  </select>
+  

@@ -1,0 +1,43 @@
+<form [formGroup]="reactiveForm" (submit)="submit()">
+
+  <label>Name:</label>
+  <input type="text" formControlName="name" />
+  <span *ngIf="reactiveForm.get('name')?.invalid && reactiveForm.get('name')?.touched">
+    Name is required.
+  <br />
+  </span>
+  <label>Email:</label>
+  <input type="email" formControlName="email" />
+  <br /><br />
+  <label>Country</label>
+  <select  name="country" formControlName="country">
+    <option value=""  selected="true" disabled="true">Select Country</option>
+    <ng-container *ngFor="let country of countries">
+      <option [value]="country">{{ country }}</option>
+    </ng-container>
+  </select>
+  <label>Skills:</label>
+  <div formArrayName="skills">
+    <div *ngFor="let skill of skills.controls; let i = index">
+      <input type="text" [formControlName]="i" placeholder="Skill" />
+      <button type="button" (click)="removeSkill(i)">Remove</button>
+    </div>
+  </div>
+  <button type="button" (click)="addSkill()">Add Skill</button>
+
+  <br /><br />
+
+  <label>Experience:</label>
+  <div formArrayName="experience">
+    <div *ngFor="let exp of experience.controls; let i = index" [formGroupName]="i">
+      <input type="text" formControlName="company" placeholder="Company" />
+      <input type="number" formControlName="years" placeholder="Years" />
+    </div>
+  </div>
+  <button type="button" (click)="addExperience()">Add Experience</button>
+
+  <br /><br />
+
+  <button type="submit">Submit</button>
+
+</form>

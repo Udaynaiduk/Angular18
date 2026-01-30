@@ -1,0 +1,19 @@
+<table class="table table-bordered table-dark">
+    <thead>
+        <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Edit</th>
+        <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let emp of empdata; trackBy:track">
+        <tr>
+        <td>{{emp.id}}</td>
+        <td>{{emp.name}}</td>
+        <td><button class="btn btn-primary" (click)="onEdit(emp.id)">Edit</button></td>
+        <td><button class="btn btn-primary" (click)="delete(emp.id)">Delete</button></td>
+    </tbody>
+
+
+</table>

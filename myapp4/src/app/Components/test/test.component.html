@@ -1,0 +1,8 @@
+<p>test works!</p>
+<input type="text"[(ngModel)]=age>
+<div *ngIf="age > 19; else restrict">
+    <h2>Welcome to the site!</h2>
+</div>
+<ng-template #restrict>
+    <h2>Access restricted. You must be 19 or older.</h2>
+</ng-template>

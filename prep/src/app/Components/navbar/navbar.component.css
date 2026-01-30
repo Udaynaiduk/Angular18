@@ -1,0 +1,18 @@
+.nav{
+    background-color: #e05d17;
+    
+}
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+  }
+  
+  /* Optional: smoother hover */
+  .dropdown-menu {
+    transition: all 0.2s ease-in-out;
+  }
+  .cart{
+   display: none;
+    
+  }
+

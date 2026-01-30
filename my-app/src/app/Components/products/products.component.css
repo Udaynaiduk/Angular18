@@ -1,0 +1,40 @@
+/* Fix card total height */
+.amazon-card {
+    height: 480px;            /* adjust as needed */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Fix image area */
+  .amazon-img {
+    height: 200px;
+    object-fit: contain;
+  }
+  
+  /* Body flex fix */
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .card-title{
+    height: 20px;             /* ensures equal height */
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  /* Fix description height */
+  .card-text.small {
+    height: 60px;             /* ensures equal height */
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .amazon-img {
+    width: 100%;
+    height: 220px;          /* fixed uniform height */
+    object-fit: contain;    /* keeps full image without cutting */
+    padding: 10px;          /* optional spacing */
+    background: white;      /* maintains clean border */
+  }
+  

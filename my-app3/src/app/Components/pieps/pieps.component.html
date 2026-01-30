@@ -1,0 +1,11 @@
+<p>pieps works!</p>
+<h1>{{Date| date:'shortDate'}}</h1>
+
+<input type="date" [(ngModel)]="dob">
+<input type="date" [(ngModel)]="Dates">
+<h1>{{Dates}}</h1>
+
+<h2>Your DOB is {{dob | agecal }}</h2>
+<h1>{{NRCValue|nrc|date:'shortDate'}}</h1>
+<h1>{{timeStamp|date:'fullTime':'UTC'}}</h1>
+<h1>{{timeStamp|date:'fullTime':'GMT+5:30'}}</h1>

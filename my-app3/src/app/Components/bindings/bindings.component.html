@@ -1,0 +1,31 @@
+<p>bindings works!</p>
+<h1>{{interpolation}}</h1>
+<h2 [innerText]="name"></h2>
+<h2 [innerText]="name1"></h2>
+<h2 [innerText]="nam2"></h2>
+<h1>{{nam2}}</h1>
+<h1>{{name1}}</h1>
+<div *ngIf="name===null">
+    undefined hllo
+</div>
+<div *ngIf="name1===null">
+   null hello
+</div>
+<input [value]="name1" type="text">
+<input [value]="name" type="text">
+<input [(ngModel)]="name" type="text" value="name">
+
+<label  for="name">Name:</label>
+<input id="name" [(ngModel)]="firstname" type="text">
+<h1>{{firstname}}</h1>
+
+<h1 #temp>Hello</h1>
+<h1 #temp1>Hello</h1>
+<label>Enter Your Age</label>
+<input type="number" [(ngModel)]="age" #inputbox>
+<div *ngIf="age!==null&&age > 20;else nolimt ">
+    Eligble 
+</div>
+<ng-template #nolimt>
+    Not Eligble
+

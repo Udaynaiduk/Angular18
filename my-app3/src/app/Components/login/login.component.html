@@ -1,0 +1,9 @@
+<form #myfom="ngForm" (ngSubmit)="submit(myfom.value)">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" ngModel required /><br /><br />
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" ngModel required /><br /><br />
+
+    <button type="submit" [disabled]="!myfom.valid">Login</button>
+</form>

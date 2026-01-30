@@ -1,0 +1,12 @@
+.center{
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+
+}
+.no{
+    color: red;
+    
+}

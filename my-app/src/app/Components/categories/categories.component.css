@@ -1,0 +1,14 @@
+.category img{
+    margin-top: 5px;
+    width: 75px;
+    height: 65px;
+    box-sizing: border-box fill;
+    
+}
+
+.category div{
+    padding-top: 1px;
+    font-size: 12px;
+    font-weight: bold;
+}
+

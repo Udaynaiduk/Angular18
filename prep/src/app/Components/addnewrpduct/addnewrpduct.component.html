@@ -1,0 +1,57 @@
+
+
+<div class="form-container">
+  <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+    
+    <!-- ID Field -->
+    <label for="id">ID</label>
+    <input type="number" id="id" formControlName="id" class="form-control">
+    <span *ngIf="productForm.get('id')?.hasError('required') && productForm.get('id')?.touched" class="text-danger">
+      ID is required
+    </span>
+    <span *ngIf="productForm.get('id')?.hasError('min') && productForm.get('id')?.touched" class="text-danger">
+      ID must be greater than 0
+    </span>
+
+    <!-- Title Field -->
+    <label for="title">Title</label>
+    <input type="text" id="title" formControlName="title" class="form-control">
+    <span *ngIf="productForm.get('title')?.hasError('required') && productForm.get('title')?.touched" class="text-danger">
+      Title is required
+    </span>
+    <span *ngIf="productForm.get('title')?.hasError('minlength') && productForm.get('title')?.touched" class="text-danger">
+      Title must be at least 5 characters
+    </span>
+
+    <!-- Price Field -->
+    <label for="price">Price</label>
+    <input type="number" id="price" formControlName="price" class="form-control">
+    <span *ngIf="productForm.get('price')?.hasError('required') && productForm.get('price')?.touched" class="text-danger">
+      Price is required
+    </span>
+    <span *ngIf="productForm.get('price')?.hasError('min') && productForm.get('price')?.touched" class="text-danger">
+      Price must be at least 0.1
+    </span>
+
+    <!-- Description Field -->
+    <label for="description">Description</label>
+    <textarea id="description" formControlName="description" class="form-control"></textarea>
+
+    <!-- Category Field -->
+    <label for="category">Category</label>
+    <input type="text" id="category" formControlName="category" class="form-control">
+
+    <!-- Image Field -->
+    <label for="image">Image URL</label>
+    <input type="text" id="image" formControlName="image" class="form-control">
+    <span *ngIf="productForm.get('image')?.hasError('required') && productForm.get('image')?.touched" class="text-danger">
+      Image URL is required
+    </span>
+
+    <!-- Submit Button -->
+    <button type="submit" [disabled]="productForm.invalid" class="btn-submit">
+      Submit
+    </button>
+
+  </form>
+</div>

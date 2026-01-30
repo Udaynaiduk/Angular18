@@ -1,0 +1,33 @@
+<form #productForm="ngForm">
+
+    <label>ID:</label>
+    <input type="number" name="id" [(ngModel)]="product.id" class="form-control">
+  
+    <label>Title:</label>
+    <input type="text" name="title" [(ngModel)]="product.title" class="form-control">
+  
+    <label>Price:</label>
+    <input type="number" name="price" [(ngModel)]="product.price" class="form-control">
+  
+    <label>Description:</label>
+    <textarea name="description" [(ngModel)]="product.description" class="form-control"></textarea>
+  
+    <label>Category:</label>
+    <input type="text" name="category" [(ngModel)]="product.category" class="form-control">
+  
+    <label>Image URL:</label>
+    <input type="text" name="image" [(ngModel)]="product.image" class="form-control">
+  
+    <h4>Rating</h4>
+  
+    <label>Rate:</label>
+    <input type="number" name="rate" [(ngModel)]="product.rating.rate" class="form-control">
+  
+    <label>Count:</label>
+    <input type="number" name="count" [(ngModel)]="product.rating.count" class="form-control">
+  
+    <br>
+    <button class="btn btn-primary" (click)="submit()">Submit</button>
+  
+  </form>
+  

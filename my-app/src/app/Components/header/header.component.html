@@ -1,0 +1,19 @@
+
+<header>
+    <div class="logo">
+      <a href="#"><img src="https://www.amazon.com/favicon.ico" alt="Amazon logo"></a>
+    </div>
+    <input clss="search" type="text" placeholder="Search..."  [(ngModel)]="search_text" (ngModelChange)="search()">
+    <div class="user-nav">
+      <ul>
+        <li><a routerLink="/parent/${1}">Home</a></li>
+        <li><a routerLink="/sellerL">Seller</a></li>
+        <li><a [routerLink]="['/login']">Login</a></li>
+        <li >Register</li>
+        <li>Cart</li>
+        <li><a (click)="logout()">Logout</a></li>
+      </ul>
+    </div>
+  </header>
+  
+  

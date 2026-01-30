@@ -1,0 +1,17 @@
+<label>Id</label>
+<div >
+<input type="number" [(ngModel)]="id" class="form-control"/>
+</div>
+<label>Name</label>
+<input type="text" [(ngModel)]="name" class="form-control"/>
+
+<label>Age</label>
+<input type="number" [(ngModel)]="age" class="form-control"/>
+
+<label>Salary</label>
+<input type="number" [(ngModel)]="salary" class="form-control"/>
+
+<!-- Button changes depending on edit/add mode -->
+<button class="btn btn-primary mt-3" (click)="addEmployee()">
+  {{ editData ? "Update Employee" : "Add Employee" }}
+</button>

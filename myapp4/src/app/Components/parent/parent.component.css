@@ -1,0 +1,31 @@
+.titel{
+  font-size: 50px;
+  text-align: center;
+  color: brown;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container {
+    height: 350px;
+    width: 250px;
+    background-color: blanchedalmond;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+  }
+  
+  .container:hover {
+    transform: scale(1.05);
+  }
+  
+ #time{
+margin-top: 10px;
+   margin-left:80% ;
+ }

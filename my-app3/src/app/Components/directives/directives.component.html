@@ -1,0 +1,52 @@
+<p>directives works!</p>
+<h1 [innerHTML]="script"></h1>
+<a [href]="url">W3school</a>
+<h1 [ngStyle]="{'color':'red','background-color':'blue'}">Style Binding</h1>
+<div *ngFor="let user of user; trackBy:trackByUser">
+    <h2>{{user.id}}. {{user.name}} - </h2>
+</div>
+<div *ngIf="numberValue%2!=1">
+    Even Number
+</div>
+<h1 [ngStyle]="numberValue%2==0 ? {'color': 'red'} : {'color':'solid'}">Evene number</h1>
+<h1 [ngClass]="numberValue%2==0? 'center':'no'">ng class</h1>
+<h2 [style.background-color]="flg?'red':'blue'">Hello</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+    </thead>
+    <tbody>
+     <tr *ngFor="let user of users; trackBy:trackByUser" >
+        <td>{{user.id}}</td>
+        <td appName>{{user.name}}</td>
+        <td [ngStyle]="redlist(user.age)">{{user.age}}</td>
+     </tr>
+     
+    </tbody>
+    
+</table>
+
+<button *ngFor="let item of users">...</button>
+<p *ngFor="let item of users">...</p>
+<ng-container *ngFor="let item of users">
+    <button>{{ item.name }}</button>
+    <p>{{ item.name }}</p>
+  </ng-container>
+ 
+  
+
+  <div *ngFor="let item of users">
+    <button>{{ item.name }}</button>
+    <p>{{ item.name }}</p>
+  </div>
+  <input type="text" appNumberonly>
+
+  <h1>{{age| age| uppercase}}</h1>
+
+  
+ 

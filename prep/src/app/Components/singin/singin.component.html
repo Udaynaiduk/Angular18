@@ -1,0 +1,46 @@
+@let name='Sign In';
+<h1 class="titel">{{name}}</h1>
+<div class="for" >
+    <form form [formGroup]="sigingForm" (ngSubmit)="onSubmit()">
+      <label>Email</label>
+      <input type="email" formControlName="email" class="form-control">
+      <span *ngIf="sigingForm.get('email')?.hasError('required') && sigingForm.get('email')?.touched" class="text-danger">
+        Email is required
+      </span>
+      <span *ngIf="sigingForm.get('email')?.hasError('minlength') && sigingForm.get('email')?.touched" class="text-danger">
+        Email must be at least 5 characters
+      </span>
+  
+      <label>Password</label>
+      <input type="password" formControlName="password" class="form-control">
+      <span *ngIf="sigingForm.get('password')?.hasError('required') && sigingForm.get('password')?.touched" class="text-danger">
+        Password is required
+      </span>
+      <span *ngIf="sigingForm.get('password')?.hasError('minlength') && sigingForm.get('password')?.touched" class="text-danger">
+        Password must be at least 5 characters
+      </span>
+      <div formArrayName="addresses">
+        <div *ngFor="let address of addresses.controls; let i = index" [formGroupName]="i">
+          <label>City</label>
+          <input type="text" formControlName="city" class="form-control">
+      
+          <label>State</label>
+          <input type="text" formControlName="state" class="form-control">
+      
+          <label>Country</label>
+          <select formControlName="country" class="form-control">
+            <option *ngFor="let country of countries" [value]="country">{{ country }}</option>
+          </select>
+          <button type="button" (click)="remove(i)" class="btn btn-danger mt-2">Remove Address</button>
+        </div>
+        <button type="button" (click)="addaddress()" class="btn btn-secondary mt-2">Add New Address</button>
+      </div>
+      
+      
+      <button type="submit" [disabled]="sigingForm.invalid" class="btn btn-primary mt-2">
+        SignIn
+      </button>
+    </form>
+  </div>
+  
+  

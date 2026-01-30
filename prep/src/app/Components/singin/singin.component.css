@@ -1,0 +1,93 @@
+/* Make the page full height and center the form */
+html, body {
+   
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f1f1f1;
+}
+.titel{
+    text-align: center;
+    color: #e05d17;
+    margin-bottom: 20px;
+}
+/* Center the form container */
+.for {
+  
+  display: flex;
+  justify-content: center;  /* horizontal center */
+  align-items: center;      /* vertical center */
+           /* full viewport height */
+}
+
+/* Style the form as a card */
+form {
+  
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  padding: 30px;
+  border-radius: 10px;
+  background-color:#e05d17;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Labels */
+label {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Inputs and selects */
+input, select {
+  margin-top: 5px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+  appearance: none; /* removes default dropdown arrow on some browsers */
+  background-color: #fff;
+}
+
+/* Style the dropdown arrow for select */
+select {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 140 140' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='0,0 140,0 70,70' fill='%23999'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px;
+}
+
+/* Options inside select */
+option {
+  padding: 5px;
+}
+
+/* Validation messages */
+.text-danger {
+  font-size: 12px;
+  color: red;
+  margin-top: 3px;
+}
+
+/* Button styling */
+button[type="submit"] {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Button hover effect */
+button[type="submit"]:hover:not(:disabled) {
+  background-color: #0056b3;
+  color: #fff;
+}
+
+/* Disabled button */
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}

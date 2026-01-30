@@ -1,0 +1,104 @@
+/*body{
+    background-image: url('https://www.w3schools.com/html/workplace.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+table, th,td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    border-color: aqua;
+}
+td, th{
+    padding: 10px;
+    text-align: left;
+    background-color: aquamarine;
+}
+
+#id1{
+    border-style:dotted;
+    border-color: blue;
+    background-color: lightblue;
+    border-radius: 10%;
+}
+#id2{
+    border-style:solid;
+    border-color: green;
+    background-color: lightgreen;
+    border-width:10px 20px 10px 30px ;
+    border-right-style: groove ;
+}
+#id3{
+    border-style:groove;
+    border-color: red;
+    background-color: lightcoral;
+    border-width: 10px;
+}
+
+h1#id5{
+    margin-left:30% ;
+    margin-top:0.5%;
+}
+#id6 {
+    width: 300px;
+    padding: 25px;
+    box-sizing: border-box;
+text-align: right;
+text-decoration-line: underline;
+text-decoration-color:chartreuse ;
+text-transform: uppercase;
+text-shadow: 20px 10px 5px gray;
+
+visibility:visible;
+overflow: scroll;
+justify-content: center;
+align-items: center;
+  }
+
+  #id7{
+    position: static;
+    left: 30px;
+    border: 3px solid #73AD21;
+  }
+
+  div.sticky {
+    position: sticky;
+    top: 0;
+    padding: 5px;
+    background-color: #cae8ca;
+    border: 2px solid #4CAF50;
+    display: flex;
+  } 
+
+  .broders{
+        border-color: aqua;
+        border-style: solid;
+        border-top-style: dashed;
+        outline-style:dotted ;
+        outline-color: chartreuse;
+  }
+
+  p{
+    text-align:start;
+  }
+
+  a:hover{
+    color: red;
+
+  }
+
+  div.main{
+    display: grid;
+    border:2px solid black;
+    width: 100px;
+    height: 100px;
+    overflow: scroll;
+  }
+  div.child{
+    width: 50px;
+    margin:10px;
+    padding:10px;
+
+  }
+    */

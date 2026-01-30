@@ -1,0 +1,22 @@
+<p>observable works!</p>
+<button (click)="startObservable()">Start Observable</button>
+<h1>{{obserable|async}}</h1>
+<h2>{{obsetable|async}}</h2>
+<ng-container *ngFor="let c of mapdemo" >
+    <p>{{c}}</p>
+</ng-container>
+<ng-container *ngFor="let c of zipdemp" >
+    <p>{{c.letter}}</p>
+</ng-container>
+<ng-container *ngFor="let c of usersdata" >
+    <p>{{c.id}}</p>
+    <p>{{c.name}}</p>
+</ng-container>
+<input type="text" [(ngModel)]="searchtext" (ngModelChange)="search($event)">
+<div *ngIf="searchdata">
+    <p>ID: {{ searchdata.id }}</p>
+    <p>User ID: {{ searchdata.userId }}</p>
+    <p>Title: {{ searchdata.title }}</p>
+    <p>Body: {{ searchdata.body }}</p>
+  </div>
+  

@@ -1,0 +1,20 @@
+<h1 #div>Parents worksc</h1>
+<h1>{{name|slice:0:2}}</h1>
+<textarea  type="text" #inputdata></textarea>
+<button (click)="getdata(inputdata.value)">Get Data</button>
+<br>
+<input type="text" [(ngModel)]="parentdata">
+<app-child  [proucts]="parentproducts" >
+   <div #contentdata> 
+    This ng content Data
+</div>
+</app-child>
+<br>
+<input type="text" #inputdata>
+<button (click)="getdata(inputdata.value)">Get Data</button>
+<button (click)="check()">Access Child Div</button>
+<button><a routerLink="/parent/child">child</a></button>
+
+
+
+

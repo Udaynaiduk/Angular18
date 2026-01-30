@@ -1,0 +1,21 @@
+<table class="table table-bordered table-dark">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+     <tr *ngFor="let user of empData; trackBy:trackByUser" >
+        <td>{{user.id}}</td>
+        <td appName>{{user.name}}</td>
+        <td >{{user.age}}</td>
+        <td ><button (click)="edit(user)">Edit</button></td>
+        <td ><button (click)="delete(user)">Delete</button></td>
+     </tr>
+     
+    </tbody>
+</table>

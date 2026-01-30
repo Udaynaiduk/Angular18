@@ -1,0 +1,45 @@
+<form #myForm="ngForm" (submit)="submit(myForm)">
+    <div>
+        First Name: <input #fname="ngModel" name="firstName" ngModel required minlength="5" />
+
+        <span class="text-danger" *ngIf="fname.hasError('required') && fname.dirty">FirstName is required</span>
+        <span class="text-danger" *ngIf="fname.hasError('minlength') && fname.dirty">FirstName should have minimum 5
+            characters</span>
+    </div>
+    <div>
+        Last Name: <input #lname="ngModel" name="lastName" ngModel required minlength="5" />
+
+        <span class="text-danger" *ngIf="lname?.errors?.['required'] && lname.dirty">lastName is required</span>
+        <span class="text-danger" *ngIf="lname?.errors?.['minlength'] && lname.dirty">minimum 5 chars</span>
+    </div>
+    <div>
+        Email: <input #email="ngModel" name="email" ngModel required email />
+    </div>
+    <fieldset ngModelGroup="address">
+        <div>
+            Street Name: <input #street="ngModel" name="street" ngModel />
+        </div>
+        <div>
+            City: <input #city="ngModel" name="city" ngModel />
+        </div>
+        <div>
+            PIN: <input #pin="ngModel" name="pin" ngModel />
+        </div>
+    </fieldset>
+
+    <button type="submit" [disabled]="myForm.invalid" >Submit</button>
+    <button type="reset">reset</button>
+</form>
+
+<h3>{{myForm.value | json}}</h3>
+
+<h3>{{fname.value}}</h3>
+<div>{{fname.errors | json}}</div>
+<div>{{fname.valid | json}}</div>
+
+<div></div>
+
+<form #newForm>
+    name : <input #name="ngModel" name="name" ngModel  pattern="[a-zA-z]+"/>
+    <span class="text-danger" *ngIf="name.hasError('pattern')&& name.dirty">Only characters are allowed</span>
+</form>

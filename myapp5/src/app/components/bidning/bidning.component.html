@@ -1,0 +1,21 @@
+@let na='venaktesh';
+
+<input type="text" [(ngModel)]="name">
+<h1>{{name}}</h1>
+<h1 [innerText]="name"></h1>
+<button (click)="clilck()">{{normal_mode?'dark-mode':'normal-mode'}}</button>
+
+<input type="number" [(ngModel)]="age">
+
+<div *ngIf="age ;else not">
+    you are eligible for voting
+</div>
+<ng-template #not>
+    you are not eligible for voting
+</ng-template>
+<h1>{{na}}</h1>
+<p [hidden]="show">paragtasj</p>
+<button (click)="showpara()">{{show?'show':'hide'}}</button>
+
+<input [type]="show?'password':'text'">
+<button id="passwor" (click)="showpara()">{{show?'text':'password'}}</button>

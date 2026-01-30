@@ -1,0 +1,91 @@
+/* Full height and center the form */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f1f1f1;
+  }
+  
+  .title {
+    text-align: center;
+    color: #e05d17;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  /* Center the form container */
+  .form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* full viewport height */
+  }
+  
+  /* Style the form as a card */
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #e05d17;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    color: #fff;
+  }
+  
+  /* Labels */
+  label {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  /* Inputs and textarea */
+  input, textarea {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+    appearance: none;
+    background-color: #fff;
+    color: #000;
+  }
+  
+  /* Validation messages */
+  .text-danger {
+    font-size: 12px;
+    color: #ffcccc;
+    margin-top: 3px;
+  }
+  
+  /* Submit button */
+  .btn-submit {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    background-color: #ff7a3c;
+    color: #fff;
+    border: none;
+    transition: background-color 0.3s;
+  }
+  
+  /* Hover effect for button */
+  .btn-submit:hover:not(:disabled) {
+    background-color: #c14b14;
+  }
+  
+  /* Disabled button */
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
