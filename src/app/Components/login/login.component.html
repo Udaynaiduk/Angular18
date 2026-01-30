@@ -1,0 +1,49 @@
+<form [formGroup]="loginform" (ngSubmit)="submit()">
+
+    <label>Username:</label>
+    <input formControlName="username" type="text" />
+    <span *ngIf="loginform.get('username')?.errors?.['required'] && loginform.dirty">
+      Username is required.</span>
+    <br />
+  
+    <label>Password:</label>
+    <input formControlName="password" type="password" />
+  
+    <br />
+  
+    <!-- Address Group -->
+    <div formGroupName="address">
+      <label>Street:</label>
+      <input formControlName="street" type="text" />
+  
+      <br />
+  
+      <label>City:</label>
+      <input formControlName="city" type="text" />
+  
+      <br />
+  
+      <label>Zip Code:</label>
+      <input formControlName="zip" type="text" />
+    </div>
+  
+    <br />
+  
+    <!-- Skills FormArray -->
+    <div formArrayName="skills">
+      <label>Skills</label>
+  
+      <div *ngFor="let skill of getskill().controls; let i = index">
+        <input type="text" [formControlName]="i" />
+        <button type="button" (click)="removeskill(i)">Remove</button>
+      </div>
+  
+      <button type="button" (click)="addskill()">Add Skill</button>
+    </div>
+  <button type="submit" [disabled]="loginform.invalid">Login</button>
+  </form>
+  
+  <div *ngIf="errorMessage" class="error">
+    {{ errorMessage }}
+  </div>
+  

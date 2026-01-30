@@ -1,0 +1,17 @@
+
+<a routerLink='/pipe/todo'>Rodo</a>
+<p>pipes works!</p>
+<h1>{{ 'hello world' | uppercase }}</h1>
+<h2>{{ 0.2567 | percent }}</h2>
+<h2>{{ 1234.56 | currency:'EUR' }}</h2>
+<h2>{{ 1234.56 | number:'1.2-4' }}</h2>
+<h2>{{ todat | date:'fullDate' }}</h2>
+<h2>{{ todat | date:'shortTime' }}</h2>
+<h2>{{ todat | date:'yyyy-MM-dd HH:mm:ss' }}</h2>
+<h2>{{ '2024-06-15T10:30:00' | date:'fullDate' }}</h2>
+<h2>{{ '2024-06-15T10:30:00' | date:'shortTime' }}</h2>
+<h2>{{ '2024-06-15T10:30:00' | date:'yyyy-MM-dd HH:mm:ss' }}</h2>
+<h1>{{'NRC200110VRE'|slice:3:9}}</h1>
+<input type="date" [(ngModel)]="Dob" placeholder="Enter your name">
+<h2>Your date of birth is: {{Dob | age}}</h2>
+

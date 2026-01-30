@@ -1,0 +1,18 @@
+
+
+<!--<div class="product">
+    <img [src]="product.image" alt="{{ product.titel }}" />
+    <h2>{{ product.titel }}</h2>
+    <p>Price: {{ product.price | currency }}</p>
+    <p>Description: {{ product.description }}</p>
+
+    
+
+</div>-->
+
+<img [src]="product.image" alt="{{ product.titel }}">
+<h1>{{ product.title|uppercase }}</h1>
+<p>{{ product.price | currency }}</p>
+<p>Description: {{ product.description }}</p>
+
+<a [routerLink]="['/view', product.id]">View Details</a>

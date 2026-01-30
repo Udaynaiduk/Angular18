@@ -1,0 +1,16 @@
+<br>
+<h1 #titel>Products</h1>
+<h1 [innerHTML]="script"></h1>
+<input type="search" [(ngModel)]="searchitem" (ngModelChange)="searchitems($event)"> 
+
+<div class="main">
+<div  class="container" *ngFor="let prod of filterproducts">
+    <app-child [product]="prod"></app-child>
+</div>
+</div>
+<ng-template #dynamic>
+</ng-template>
+<button (click)="load()">Load Dynamic</button>
+<!--
+<time id="time">{{time|async}}</time>
+-->

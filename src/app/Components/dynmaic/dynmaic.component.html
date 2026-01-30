@@ -1,0 +1,17 @@
+<p>Dynamic works!</p>
+<p>{{ parentset }}</p>
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users" [ngStyle]="stylr(user)">
+      <td>{{ user.id }}</td>
+      <td>{{ user.name }}</td>
+    </tr>
+  </tbody>
+</table>
